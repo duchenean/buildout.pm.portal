@@ -1,13 +1,15 @@
-# Release 2.3.7
+# Release 1.1.0
 
 **Date:** 2025-12-10
 
 ## Package Updates
 
-### plonetheme.deliberations (1.5 → 1.6)
+### plonemeeting.portal.core (2.3.0 → 2.3.1)
 
-#### Version 1.6 (2025-12-10)
+#### Version 2.3.1 (2025-12-10)
 
-- Minor tweaks.
+- Fix `publication_workflow` perms and guards.
+  [aduchene]
+- Fix upgrade step to 2300.
   [aduchene]
 
