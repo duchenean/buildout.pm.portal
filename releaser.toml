@@ -1,0 +1,56 @@
+versions_file = "versions.cfg"
+
+[[packages]]
+name = "plonemeeting.portal.core"
+allow_prerelease = false
+
+[[packages]]
+name = "plonetheme.deliberations"
+allow_prerelease = false
+
+[git]
+auto_push = false
+commit_template = "Use {packages}"
+
+[github]
+create_release = true
+tag_prefix = ""
+
+[changelog]
+# Enable changelog collection by default
+enabled = true
+
+# Output format: "markdown", "rst", or "text"
+format = "markdown"
+
+# Output file (optional - if not set, only used for GitHub release notes)
+output_file = "CHANGELOG.md"
+
+# Include changelog file in the commit
+include_in_commit = true
+
+# Use collected changelog as GitHub release notes
+use_as_release_notes = true
+
+# Custom header template
+# Available placeholders: {version}, {date}
+header_template = "# Release {version}\n\n**Release Date:** {date}\n\n## Updated Packages"
+
+# Custom package section template
+# Available placeholders: {package}, {old_version}, {new_version}
+package_template = "### {package} ({old_version} → {new_version})"
+
+# Files to look for when fetching changelogs from GitHub
+changelog_files = [
+    "CHANGELOG.md",
+    "CHANGES.md",
+    "HISTORY.md",
+    "CHANGELOG.rst",
+    "CHANGES.rst",
+    "CHANGES.txt",
+    "docs/CHANGELOG.md",
+    "docs/CHANGES.rst",
+]
+
+# Additional GitHub branches to try (main and master are always tried)
+github_branches = []
